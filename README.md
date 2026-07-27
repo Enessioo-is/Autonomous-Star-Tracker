@@ -25,7 +25,7 @@ This project tackles two main engineering challenges:
 * **Server/Brain:** Old Android Tablet (Rooted)
 * **Controller:** Arduino Nano 
 * **Motor Driver:** L298N Dual Motor Driver Board
-* **Actuators:** 2x DC Geared Motors ("Yellow Motors" for Pan/Tilt mechanism)
+* **Actuators:** 2x DC Geared Motors (For Pan/Tilt mechanism)
 * **Power:** 5V Powerbank (For fully autonomous operation)
 
 ---
@@ -36,7 +36,7 @@ To achieve precise positioning using motors *without* hardware encoders, a time-
 
 1. **Calculation:** Python uses the `Skyfield` library to calculate the target's (e.g., Jupiter) real-time Altitude and Azimuth angles relative to the local horizon.
 2. **Communication:** The calculated target angles are sent to the Arduino via USB (Serial Port).
-3. **Relative Movement Logic (Memory Hack):** 
+3. **Relative Movement Logic:** 
    * Since the DC motors lack encoders, the Arduino stores its current position in a memory variable (`current_position`).
    * If the target is 77° and the current position is 30°, the Arduino only drives the motor for the difference (+47°).
 4. **Time-based Actuation:** The angle difference is multiplied by a calibrated time constant (e.g., 1 degree = 100 ms) to ensure the motors run for the exact required duration.
