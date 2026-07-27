@@ -51,13 +51,13 @@ To achieve precise positioning using motors *without* hardware encoders, a time-
 
   ![Jupiter Data](terminal.png)
 * **Image 2:** Wiring diagram of the Arduino, L298N, and DC motors.
-
+```mermaid
 graph TD
     subgraph Power
         PB[5V Powerbank]
     end
-
-    ```subgraph Controller
+    
+    subgraph Controller
         Nano[Arduino Nano]
     end
 
@@ -82,7 +82,8 @@ graph TD
     %% Motor Connections
     L298N -->|OUT1, OUT2| M1
     L298N -->|OUT3, OUT4| M2
-    ```
+```
+    
 * **GIF:** The system autonomously orienting towards Venus.
 
 ---
