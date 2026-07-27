@@ -50,7 +50,6 @@ To achieve precise positioning using motors *without* hardware encoders, a time-
 * **Image 1:** Real-time Jupiter targeting data from the Linux terminal.
 * **Image 2:** Wiring diagram of the Arduino, L298N, and DC motors.
 ![Jupiter Data](terminal.png)
-```mermaid
 graph TD
     subgraph Power
         PB[5V Powerbank]
@@ -70,17 +69,16 @@ graph TD
     end
 
     %% Power Connections
-    PB -- 5V & GND --> Nano
-    PB -- 5V & GND --> L298N
+    PB -->|5V & GND| Nano
+    PB -->|5V & GND| L298N
 
     %% Data Connections (Arduino to Driver)
-    Nano -- D5, D6 -->|IN1, IN2| L298N
-    Nano -- D9, D10 -->|IN3, IN4| L298N
+    Nano -->|D5, D6 to IN1, IN2| L298N
+    Nano -->|D9, D10 to IN3, IN4| L298N
 
     %% Motor Connections
-    L298N -- OUT1, OUT2 --> M1
-    L298N -- OUT3, OUT4 --> M2
-```
+    L298N -->|OUT1, OUT2| M1
+    L298N -->|OUT3, OUT4| M2
 * **GIF:** The system autonomously orienting towards Venus.
 
 ---
