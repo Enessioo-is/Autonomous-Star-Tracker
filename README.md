@@ -77,11 +77,12 @@ graph TD
     %% Data Connections (Arduino to Driver)
     Nano -->|D5, D6 to IN1, IN2| L298N
     Nano -->|D9, D10 to IN3, IN4| L298N
-    ```
+    
 
     %% Motor Connections
     L298N -->|OUT1, OUT2| M1
     L298N -->|OUT3, OUT4| M2
+    ```
 * **GIF:** The system autonomously orienting towards Venus.
 
 ---
