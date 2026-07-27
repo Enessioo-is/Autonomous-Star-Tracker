@@ -216,3 +216,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# NASA Astronomy Data Files
+*.bsp
+de421.bsp
