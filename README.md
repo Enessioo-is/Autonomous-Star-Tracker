@@ -48,8 +48,10 @@ To achieve precise positioning using motors *without* hardware encoders, a time-
 *(Photos of the setup and a short GIF of the tracking mechanism in action will be added here)*
 
 * **Image 1:** Real-time Jupiter targeting data from the Linux terminal.
+
+  ![Jupiter Data](terminal.png)
 * **Image 2:** Wiring diagram of the Arduino, L298N, and DC motors.
-![Jupiter Data](terminal.png)
+
 graph TD
     subgraph Power
         PB[5V Powerbank]
